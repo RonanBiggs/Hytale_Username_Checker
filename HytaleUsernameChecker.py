@@ -14,7 +14,6 @@ REQUEST = "https://accounts.hytale.com/api/account/username-reservations/availab
 options = Options()
 options.binary_location = "/usr/bin/firefox"
 options.add_argument("--headless")
-# options.add_argument("--headless") # Uncomment to run without a visible window
 service = Service(executable_path="/usr/bin/geckodriver")
 driver = webdriver.Firefox(options=options, service=service)
 def get_cookies(TOKEN):
