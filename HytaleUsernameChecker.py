@@ -6,10 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 import sys
 REQUEST = "https://accounts.hytale.com/api/account/username-reservations/availability?username=" #with username at end
-MAX_WORKERS = 1
-REQUEST_DELAY = 1
-INPUT_FILE = "username_test"
-OUTPUT_FILE = "usernames.out"
+
 
 
 
