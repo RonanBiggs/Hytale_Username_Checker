@@ -116,7 +116,7 @@ def main():
                 time.sleep(60)
                 driver.quit()
                 driver = webdriver.Firefox(options=options, service=service)
-                cookies = get_cookies()
+                cookies = get_cookies(TOKEN)
                 cookies_to_add = {
                     '_cfuvid': cookies['_cfuvid'],
                     'ory_kratos_session' : kratos_token
