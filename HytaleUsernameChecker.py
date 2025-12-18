@@ -6,7 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 import sys
 REQUEST = "https://accounts.hytale.com/api/account/username-reservations/availability?username=" #with username at end
-
+OUTPUT_FILE = "valid_users.out"
 
 
 
@@ -94,7 +94,7 @@ def main():
         '_cfuvid': cookies['_cfuvid'],
         'ory_kratos_session' : kratos_token 
     }
-    cur_session = create_session_with_cookie_dict(cookies_to_add, TOKEN)
+    cur_session = create_session_with_cookie_dict(cookies_to_add)
     with open (INPUT_FILE, 'r') as f:
         n = [line.strip() for line in f if line.strip()]
     with open (OUTPUT_FILE, 'a') as out:
